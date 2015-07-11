@@ -13,7 +13,7 @@ include("constants.jl")
 # Struct creation
 
 nsrect(x, y, w, h) =
-  ccall(:nsmakerect, Ptr{Void}, (Cfloat, Cfloat, Cfloat, Cfloat),
+  ccall((:nsmakerect, "cocoa"), Ptr{Void}, (Cfloat, Cfloat, Cfloat, Cfloat),
         x, y, w, h)
 
 NSApp() = cglobal(:NSApp, Ptr{Void}) |> unsafe_load |> ObjectiveC.Object

@@ -28,4 +28,4 @@ include("foundation.jl")
 
 end
 
-# include("cocoa/cocoa.jl")
+include("cocoa/cocoa.jl")
